@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bird {
+    height: 250px;
+    width: 250px;
+    position: relative;
+}
+
+.hair-container,
+.white-container,
+.big-beak-container,
+.small-beak-container,
+.shadow-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hair-container {
+    animation: rotateHair 3s infinite ease-in-out;
+}
+
+.white-container {
+    animation: rotateWhite 3s infinite ease-in-out;
+}
+
+.big-beak-container {
+    animation: rotateBigBeak 3s infinite ease-in-out;
+}
+
+.small-beak-container {
+    animation: rotateSmallBeak 3s infinite ease-in-out;
+}
+
+.shadow-container {
+    animation: rotateShadow 3s infinite ease-in-out;
+}
+
+.hair {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    border-radius: 0 125px 125px 0;
+}
+
+.face {
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    position: absolute;
+}
+
+.white {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: white;
+    border-radius: 0 87.5px 87.5px 0;
+}
+
+.shadow {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 87.5px 0;
+}
+
+.big-beak {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: yellow;
+    border-radius: 87.5px 0 0 0;
+}
+
+.small-beak {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    background-color: orange;
+    border-radius: 0 0 0 87.5px;
+}
+
+.eye {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    bottom: 51%;
+    left: 51%;
+    background-color: #18233e;
+    border-radius: 50%;
+    animation: moveEye 3s infinite ease-in-out;
+}
+
+@keyframes rotateHair {
+    0% {
+        transform: rotate(-360deg);
+    }
+    15% {
+        transform: rotate(-360deg);
+    }
+    35% {
+        transform: rotate(-180deg);
+    }
+    65% {
+        transform: rotate(-180deg);
+    }
+    85% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateWhite {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(-180deg);
+    }
+    65% {
+        transform: rotate(-180deg);
+    }
+    85% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotateShadow {
+    15% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(90deg);
+    }
+    65% {
+        transform: rotate(90deg);
+    }
+    85% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateBigBeak {
+    15% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(90deg);
+    }
+    65% {
+        transform: rotate(90deg);
+    }
+    85% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateSmallBeak {
+    15% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(-90deg);
+    }
+    65% {
+        transform: rotate(-90deg);
+    }
+    85% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes moveEye {
+    15% {
+        left: 51%;
+        transform: translate(0px);
+    }
+    35% {
+        left: 49%;
+        transform: translate(-100%);
+    }
+    65% {
+        left: 49%;
+        transform: translate(-100%);
+    }
+    85% {
+        left: 51%;
+        transform: translate(0px);
+    }
+}
